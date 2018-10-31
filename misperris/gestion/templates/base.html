@@ -1,0 +1,28 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/gestion/css/flexboxgrid.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/gestion/css/estilo2.css"/>
+
+</head>
+<body>
+<div class="row center-xs">
+    <div class="col-xs-12">
+       <img src="/static/gestion/img/logo.png" alt="logo" valign="left "> 
+       <h1 class="form">Sistema de Gestion de Perros<h1>
+    </div>
+</div>
+
+<h6>{{fechaHora}}<h6>
+<h1>{% block content  %}
+<a href="perro/listar/">listar perros</a>
+{% endblock  %}<h1>
+<br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/gestion/css/flexboxgrid.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/gestion/css/estilo2.css">
+</head>
+<body>
+{% extends "base.html" %}
+{% block title %}Bievenido{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <div class="row center-xs">
+        <div class="col-xs-12">
+            <h1>Hola {{ user.username }}</h1>
+            <a href="{% url 'sign_out' %}"> <button> Cerrar sesión</button></a>
+            <a href="http://127.0.0.1:8000/perro/listar/"> <button> Lista de perros</button></a>
+        </div>
+    </div>
+    {% else %}
+        <div class="row center-xs">
+            <div class="col-xs-12">
+            
+            <a href="{% url 'sign_up' %}"><button class="button">Registrate</button></a>
+            <a href="{% url 'sign_in' %}"><button class="button">Iniciar sesión</button></a>
+            </div>
+        </div>
+    {% endif %}
+    
+    
+{% endblock content %}
+
+</body>
+</html>

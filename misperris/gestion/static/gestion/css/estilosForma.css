@@ -1,0 +1,28 @@
+header{
+    background-color:  #85d4b7;
+    padding: 5px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    background-color:  #6dccaa;
+
+}
+form{
+    border: 1px solid rgba(148, 139, 139, 0.192);
+    padding: 5px;
+}
+input[type=text], input[type=number], input[type=password], input[type=date], input[type=tel], input[type=email], select{
+    border: 1px solid black;
+    width: 100%;
+    padding: 8px;
+    font-size: 100%;
+
+}
+
+.button{
+    width: 100%;
+    height: 50px;
+    background-color: #ffa040 ;
+    border: 0px;
+}

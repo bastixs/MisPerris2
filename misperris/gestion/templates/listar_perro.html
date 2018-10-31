@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/gestion/css/flexboxgrid.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/gestion/css/estilo2.css">
+</head>
+<body class="font">
+{% extends 'base.html' %}
+{% block content %}
+{% for a in Mascota %}
+<div class="row center-xs">
+    <div class="col-xs-12">
+        <h2>Hola mi nombre es {{a.nombre}}</h2>
+<a href='/perro/detalle/{{a.pk}}'><button>Detalle</button></a>
+{% if request.user.is_staff %}
+<a href='/perro/eliminar/{{a.pk}}'><button>eliminar</button></a>
+<a href='/perro/editar/{{a.pk}}'><button>editar</button></a>
+{% endif %}
+    </div>
+</div>
+
+{% endfor %}
+<br>
+<div class="row center-xs">
+    <div class="col-xs-12">
+    <a href='/bienvenida/'><button>volver</button></a>
+        {% if request.user.is_staff %}
+<a href='/perro/nuevo/'><button>nuevo</button></a>
+{% endif %}
+    </div>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
+
